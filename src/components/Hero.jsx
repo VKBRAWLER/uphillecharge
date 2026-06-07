@@ -76,7 +76,7 @@ const Hero = () => {
           className="max-w-2xl"
         >
           <p className="text-[#95FF00] text-2xl font-semibold mb-5">
-            Powering a
+            Charging The Future. Powering a
           </p>
 
           <h1 className="text-white font-bold leading-tight text-5xl md:text-7xl">
@@ -87,9 +87,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-white text-xl md:text-3xl mt-8 leading-relaxed">
-            Fast, Reliable, Sustainable Charging
-            <br />
-            the future, today.
+            Fast, Reliable, Sustainable EV Chargers 
           </p>
 
           <div className="flex flex-wrap gap-4 mt-12">

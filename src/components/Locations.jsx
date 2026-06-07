@@ -140,6 +140,7 @@ const Locations = () => {
                 <LocationCard
                   image={location.image}
                   city={location.city}
+                  place={location.place}
                 />
               </SwiperSlide>
             ))}

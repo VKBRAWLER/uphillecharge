@@ -4,10 +4,9 @@ const Partners = () => {
   const [showContactOptions, setShowContactOptions] = useState(false);
 
   const partners = [
-    "VOLT MOTORS",
-    "ZEON LOGISTICS",
-    "URBAN GRID",
-    "ECO RIDE",
+    "Tech Green Inovations - Reach EV",
+    "Exicom",
+    "PlugEasy"
   ];
 
   return (
@@ -23,7 +22,7 @@ const Partners = () => {
 
           {/* Partner Logos */}
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-24">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
             {partners.map((partner) => (
               <div
                 key={partner}

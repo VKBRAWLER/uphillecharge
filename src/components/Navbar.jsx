@@ -65,7 +65,7 @@ const Navbar = () => {
 
             {/* Desktop Contact Button */}
 
-            <button
+            {/* <button
               onClick={() => setShowContactOptions(true)}
               className="
                 hidden
@@ -81,7 +81,7 @@ const Navbar = () => {
               "
             >
               Contact Us
-            </button>
+            </button> */}
 
             {/* Mobile Menu Toggle */}
 
@@ -116,7 +116,7 @@ const Navbar = () => {
                   </a>
                 ))}
 
-                <button
+                {/* <button
                   onClick={() => {
                     setOpen(false);
                     setShowContactOptions(true);
@@ -130,7 +130,7 @@ const Navbar = () => {
                   "
                 >
                   Contact Us
-                </button>
+                </button> */}
 
               </div>
 

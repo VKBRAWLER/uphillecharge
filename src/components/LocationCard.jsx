@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { IoLocationOutline } from "react-icons/io5";
 import { HiArrowRight } from "react-icons/hi";
 
-const LocationCard = ({ image, city }) => {
+const LocationCard = ({ image, city, place }) => {
   return (
     <motion.div
       whileHover={{ y: -10 }}
@@ -29,7 +29,7 @@ const LocationCard = ({ image, city }) => {
           <div className="flex items-center gap-2 text-[#95FF00] mb-2">
             <IoLocationOutline />
             <span className="text-white text-sm">
-              {city}
+              {place}
             </span>
           </div>
 
