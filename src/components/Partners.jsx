@@ -1,180 +1,124 @@
-import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { HiArrowUpRight } from "react-icons/hi2";
 
 const Partners = () => {
-  const [showContactOptions, setShowContactOptions] = useState(false);
-
   const partners = [
-    "Tech Green Inovations - Reach EV",
-    "Exicom",
-    "PlugEasy"
+    {
+      name: "Reach EV",
+      logo: "/reach.png",
+      website: "https://reachev.in/",
+    },
+    {
+      name: "Exicom",
+      logo: "/exicom.png",
+      website: "https://www.exicom.com/",
+    },
+    {
+      name: "PlugEasy",
+      logo: "/plugeasy.png",
+      website: "#",
+    },
   ];
 
   return (
-    <>
-      <section id="partners" className="min-h-screen text-white flex items-center justify-center px-6 py-20">
-        <div className="max-w-6xl w-full text-center">
+    <section
+      id="partners"
+      className="py-24 bg-[#020625]"
+    >
+      <div className="max-w-7xl mx-auto px-6">
 
-          {/* Heading */}
+        {/* Heading */}
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-24">
-            Power Your Business with Uphill
-          </h1>
+        <div className="text-center mb-16">
+          <p className="text-[#95FF00] uppercase tracking-widest font-semibold mb-4">
+            Trusted Partners
+          </p>
 
-          {/* Partner Logos */}
+          <h2 className="text-white text-4xl md:text-6xl font-bold mb-6">
+            Powering EV Innovation Together
+          </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-            {partners.map((partner) => (
-              <div
-                key={partner}
-                className="
-                  text-gray-400
-                  font-bold
-                  text-lg
-                  md:text-xl
-                  tracking-wide
-                  hover:text-white
-                  transition
-                  duration-300
-                "
-              >
-                {partner}
-              </div>
-            ))}
-          </div>
+          <p className="text-white/60 max-w-2xl mx-auto">
+            We collaborate with industry-leading charging
+            infrastructure providers and technology partners
+            to deliver reliable EV charging solutions.
+          </p>
+        </div>
 
-          {/* Buttons */}
+        {/* Partner Cards */}
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            {/* Become Partner */}
-
-            <button
-              onClick={() =>
-                (window.location.href =
-                  "mailto:support@uphillecharge.com?subject=Partnership Inquiry")
-              }
+          {partners.map((partner, index) => (
+            <motion.a
+              key={partner.name}
+              href={partner.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.15 }}
+              whileHover={{ y: -8 }}
               className="
-                bg-[#0A66D1]
-                hover:bg-[#0957b3]
-                transition
-                px-12
-                py-5
-                rounded-full
-                text-lg
-                md:text-xl
-                font-semibold
-                min-w-[250px]
-              "
-            >
-              Become a Partner
-            </button>
-
-            {/* Contact Sales */}
-
-            <button
-              onClick={() => setShowContactOptions(true)}
-              className="
-                bg-[#2A2B30]
+                group
+                bg-[#0A0D26]
                 border
-                border-[#4B4C52]
-                hover:bg-[#34353b]
-                transition
-                px-12
-                py-5
-                rounded-full
-                text-lg
-                md:text-xl
-                font-semibold
-                min-w-[250px]
+                border-white/10
+                rounded-3xl
+                p-8
+                flex
+                flex-col
+                items-center
+                justify-center
+                text-center
+                hover:border-[#95FF00]/50
+                transition-all
+                duration-300
               "
             >
-              Contact Sales
-            </button>
+              <img
+                src={partner.logo}
+                alt={partner.name}
+                className="h-20 object-contain mb-8"
+              />
 
-          </div>
+              <h3 className="text-white text-2xl font-semibold mb-3">
+                {partner.name}
+              </h3>
+
+              <p className="text-white/60 mb-6">
+                Strategic EV charging infrastructure partner.
+              </p>
+
+              <div
+                className="
+                  flex
+                  items-center
+                  gap-2
+                  text-[#95FF00]
+                  font-medium
+                "
+              >
+                Visit Website
+
+                <HiArrowUpRight
+                  className="
+                    transition-transform
+                    duration-300
+                    group-hover:translate-x-1
+                    group-hover:-translate-y-1
+                  "
+                />
+              </div>
+
+            </motion.a>
+          ))}
+
         </div>
-      </section>
 
-      {/* Contact Sales Modal */}
-
-      {showContactOptions && (
-        <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 px-4">
-
-          <div className="bg-[#11142D] border border-white/10 rounded-3xl p-8 w-full max-w-md">
-
-            <h2 className="text-white text-2xl font-bold text-center mb-6">
-              Contact Sales
-            </h2>
-
-            <p className="text-white/60 text-center mb-8">
-              Choose how you would like to contact our sales team.
-            </p>
-
-            <div className="flex flex-col gap-4">
-
-              {/* Call */}
-
-              <button
-                onClick={() => {
-                  window.location.href = "tel:+919876543210";
-                  setShowContactOptions(false);
-                }}
-                className="
-                  bg-[#95FF00]
-                  text-black
-                  py-4
-                  rounded-xl
-                  font-semibold
-                  hover:opacity-90
-                  transition
-                "
-              >
-                Call Sales Team
-              </button>
-
-              {/* Email */}
-
-              <button
-                onClick={() => {
-                  window.location.href =
-                    "mailto:support@uphillecharge.com?subject=Sales Inquiry";
-                  setShowContactOptions(false);
-                }}
-                className="
-                  bg-[#0A66D1]
-                  text-white
-                  py-4
-                  rounded-xl
-                  font-semibold
-                  hover:bg-[#0957b3]
-                  transition
-                "
-              >
-                Email Sales Team
-              </button>
-
-              {/* Cancel */}
-
-              <button
-                onClick={() => setShowContactOptions(false)}
-                className="
-                  border
-                  border-white/10
-                  py-4
-                  rounded-xl
-                  text-white
-                  hover:bg-white/5
-                  transition
-                "
-              >
-                Cancel
-              </button>
-
-            </div>
-          </div>
-        </div>
-      )}
-    </>
+      </div>
+    </section>
   );
 };
 

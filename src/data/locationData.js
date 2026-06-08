@@ -10,7 +10,7 @@ export const locationData = [
     chargingSpeed: "60 kW",
     parking: "Available",
     openHours: "24 Hours",
-    contact: "+91 9876543210",
+    contact: "+91 7302357399",
   },
 
   {
@@ -24,7 +24,7 @@ export const locationData = [
     chargingSpeed: "120 kW",
     parking: "Available",
     openHours: "24 Hours",
-    contact: "+91 9876543211",
+    contact: " +91 7302357399",
   },
 
   {
@@ -38,7 +38,7 @@ export const locationData = [
     chargingSpeed: "90 kW",
     parking: "Available",
     openHours: "24 Hours",
-    contact: "+91 9876543212",
+    contact: " +91 7302357399",
   },
 
   {
@@ -52,7 +52,7 @@ export const locationData = [
     chargingSpeed: "150 kW",
     parking: "Available",
     openHours: "9 AM - 10 PM",
-    contact: "+91 9876543213",
+    contact: " +91 7302357399",
   },
 
   {
@@ -66,6 +66,6 @@ export const locationData = [
     chargingSpeed: "80 kW",
     parking: "Available",
     openHours: "24 Hours",
-    contact: "+91 9876543214",
+    contact: " +91 7302357399",
   },
 ];

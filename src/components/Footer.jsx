@@ -2,7 +2,7 @@ import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
-  FaTwitter,
+  FaWhatsapp,
 } from "react-icons/fa";
 
 import {
@@ -22,7 +22,7 @@ const Footer = () => {
 
         {/* Main Footer */}
 
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-10 py-16">
+        <div className="grid lg:grid-cols-2 gap-16 py-16">
 
           {/* Company Info */}
 
@@ -39,10 +39,10 @@ const Footer = () => {
               </h3>
             </div>
 
-            <p className="text-white/60 leading-relaxed mb-8">
+            <p className="text-white/60 leading-relaxed mb-8 max-w-lg">
               Driving the future of sustainable mobility with
               smart EV charging solutions designed for speed,
-              convenience and reliability.
+              convenience, and reliability.
             </p>
 
             {/* Social Icons */}
@@ -71,137 +71,62 @@ const Footer = () => {
               </a>
 
               <a
-                href="#"
+                href="https://wa.me/919876543210"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#95FF00] hover:text-black transition-all duration-300"
               >
-                <FaTwitter />
+                <FaWhatsapp />
               </a>
 
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Contact Info */}
 
-          <div>
+          <div className="lg:pl-20">
             <h3 className="text-white text-xl font-semibold mb-6">
-              Quick Links
+              Contact Info
             </h3>
 
-            <ul className="space-y-4">
+            <div className="space-y-5">
 
-              <li>
-                <a
-                  href="#home"
-                  className="text-white/60 hover:text-[#95FF00] transition"
-                >
-                  Home
-                </a>
-              </li>
+              {/* Phone */}
 
-              <li>
-                <a
-                  href="#about"
-                  className="text-white/60 hover:text-[#95FF00] transition"
-                >
-                  About Us
-                </a>
-              </li>
+              <a
+                href="tel:+919876543210"
+                className="flex items-start gap-3 group"
+              >
+                <FiPhone
+                  size={20}
+                  className="text-[#95FF00] mt-1 shrink-0"
+                />
 
-              <li>
-                <a
-                  href="#purpose"
-                  className="text-white/60 hover:text-[#95FF00] transition"
-                >
-                  Our Purpose
-                </a>
-              </li>
+                <span className="text-white/60 group-hover:text-[#95FF00] transition">
+                  +91 7302357399
+                </span>
+              </a>
 
-              <li>
-                <a
-                  href="#locations"
-                  className="text-white/60 hover:text-[#95FF00] transition"
-                >
-                  Charging Stations
-                </a>
-              </li>
 
-              <li>
-                <a
-                  href="#contact"
-                  className="text-white/60 hover:text-[#95FF00] transition"
-                >
-                  Contact
-                </a>
-              </li>
+              <a
+                href="mailto:support@uphillecharge.com"
+                className="flex items-start gap-3 group"
+              >
+                <FiMail
+                  size={20}
+                  className="text-[#95FF00] mt-1 shrink-0"
+                />
 
-            </ul>
+                <span className="text-white/60 break-all group-hover:text-[#95FF00] transition">
+                  admin@uphillecharge.com
+                </span>
+              </a>
+
+
+              
+
+            </div>
           </div>
-
-          
-
-          {/* Contact Info */}
-
-          {/* Contact Info */}
-
-<div className="w-full">
-  <h3 className="text-white text-xl font-semibold mb-6">
-    Contact Info
-  </h3>
-
-  <div className="space-y-5">
-
-    {/* Phone */}
-
-    <a
-      href="tel:+919876543210"
-      className="flex items-start gap-3 group"
-    >
-      <FiPhone
-        size={20}
-        className="text-[#95FF00] mt-1 shrink-0"
-      />
-
-      <span className="text-white/60 group-hover:text-[#95FF00] transition">
-        +91 98765 43210
-      </span>
-    </a>
-
-    {/* Email */}
-
-    <a
-      href="mailto:support@uphillecharge.com"
-      className="flex items-start gap-3 group"
-    >
-      <FiMail
-        size={20}
-        className="text-[#95FF00] mt-1 shrink-0"
-      />
-
-      <span className="text-white/60 break-all group-hover:text-[#95FF00] transition">
-        support@uphillecharge.com
-      </span>
-    </a>
-
-    {/* Location */}
-
-    <a
-      href="https://maps.google.com/?q=Haldwani,Uttarakhand,India"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex items-start gap-3 group"
-    >
-      <IoLocationOutline
-        size={22}
-        className="text-[#95FF00] mt-1 shrink-0"
-      />
-
-      <span className="text-white/60 group-hover:text-[#95FF00] transition">
-        Haldwani, Uttarakhand, India
-      </span>
-    </a>
-
-  </div>
-</div>
 
         </div>
 

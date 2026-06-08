@@ -92,13 +92,20 @@ const Hero = () => {
 
           <div className="flex flex-wrap gap-4 mt-12">
 
-            <button className="bg-[#95FF00] text-black px-8 py-4 rounded-full flex items-center gap-2 font-semibold hover:scale-105 transition duration-300">
-              Find a Charger
-              <IoLocationOutline />
-            </button>
+            <button
+  onClick={() =>
+    document
+      .getElementById("locations")
+      ?.scrollIntoView({ behavior: "smooth" })
+  }
+  className="bg-[#95FF00] text-black px-8 py-4 rounded-full flex items-center gap-2 font-semibold hover:scale-105 transition duration-300"
+>
+  Find a Charger
+  <IoLocationOutline />
+</button>
 
             <button className="border border-[#95FF00] text-white px-8 py-4 rounded-full flex items-center gap-2 hover:bg-[#95FF00] hover:text-black transition duration-300">
-              Learn More
+              Contact Us
               <HiArrowRight />
             </button>
 
