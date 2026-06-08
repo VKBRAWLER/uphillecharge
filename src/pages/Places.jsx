@@ -1,0 +1,115 @@
+import { useParams } from "react-router-dom";
+import { locationData } from "../data/locationData";
+
+const Place = () => {
+  const { id } = useParams();
+
+  const place = locationData.find(
+    (item) => item.id === Number(id)
+  );
+
+  if (!place) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-[#020625] text-white">
+        <div className="text-center">
+          <p className="text-gray-400">Place Not Found</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <section className="bg-[#020625] min-h-screen text-white">
+      
+      {/* Hero Image */}
+      <div className="h-[500px] relative">
+        <img
+          src={place.image}
+          alt={place.city}
+          className="w-full h-full object-cover"
+        />
+
+        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+          <div className="text-center">
+            <h1 className="text-6xl font-bold mb-4">
+              {place.city}
+            </h1>
+
+            <p className="text-xl text-gray-200">
+              {place.place}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Details */}
+      <div className="max-w-7xl mx-auto px-6 py-16">
+
+        <h2 className="text-4xl font-bold mb-4">
+          Station Details
+        </h2>
+        
+        <div className="w-20 h-1 bg-[#95FF00] mb-8 rounded-full" />
+
+        <p className="text-gray-300 text-lg mb-12 leading-relaxed">
+          {place.description}
+        </p>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+          <div className="bg-[#0A0D26] p-6 rounded-2xl border border-white/5 hover:border-[#95FF00]/30 transition-all duration-300 hover:scale-105">
+            <h3 className="text-[#95FF00] text-sm uppercase tracking-wide mb-2">Chargers</h3>
+            <p className="text-3xl font-bold">
+              {place.chargers}
+            </p>
+          </div>
+
+          <div className="bg-[#0A0D26] p-6 rounded-2xl border border-white/5 hover:border-[#95FF00]/30 transition-all duration-300 hover:scale-105">
+            <h3 className="text-[#95FF00] text-sm uppercase tracking-wide mb-2">Speed</h3>
+            <p className="text-3xl font-bold">
+              {place.chargingSpeed}
+            </p>
+          </div>
+
+          <div className="bg-[#0A0D26] p-6 rounded-2xl border border-white/5 hover:border-[#95FF00]/30 transition-all duration-300 hover:scale-105">
+            <h3 className="text-[#95FF00] text-sm uppercase tracking-wide mb-2">Parking</h3>
+            <p className="text-3xl font-bold">
+              {place.parking}
+            </p>
+          </div>
+
+          <div className="bg-[#0A0D26] p-6 rounded-2xl border border-white/5 hover:border-[#95FF00]/30 transition-all duration-300 hover:scale-105">
+            <h3 className="text-[#95FF00] text-sm uppercase tracking-wide mb-2">Open</h3>
+            <p className="text-3xl font-bold">
+              {place.openHours}
+            </p>
+          </div>
+
+        </div>
+
+        {/* Contact */}
+        <div className="mt-12 bg-[#0A0D26] p-8 rounded-2xl border border-white/5">
+          <h3 className="text-2xl font-bold mb-4">
+            Contact Information
+          </h3>
+
+          <p className="text-gray-300">
+            Phone: <span className="text-white">{place.contact}</span>
+          </p>
+
+          <a
+            href={place.map}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-block mt-6 bg-[#95FF00] text-black px-6 py-3 rounded-full font-semibold hover:bg-[#7fd000] transition-colors duration-300"
+          >
+            View on Map →
+          </a>
+        </div>
+
+      </div>
+    </section>
+  );
+};
+
+export default Place;
