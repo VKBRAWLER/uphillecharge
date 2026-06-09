@@ -11,7 +11,7 @@ import {
   FiMail,
 } from "react-icons/fi";
 
-import { IoLocationOutline } from "react-icons/io5";
+
 
 const Footer = () => {
   return (
@@ -152,11 +152,10 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-center gap-4">
 
             <p className="text-white/40 text-sm text-center md:text-left">
-              © 2025 Uphill E Charge Private Limited
+              © 2025 Uphill Echarge Private Limited
             </p>
 
             
-
           </div>
 
         </div>

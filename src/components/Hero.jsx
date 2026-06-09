@@ -104,7 +104,11 @@ const Hero = () => {
   <IoLocationOutline />
 </button>
 
-            <button className="border border-[#95FF00] text-white px-8 py-4 rounded-full flex items-center gap-2 hover:bg-[#95FF00] hover:text-black transition duration-300">
+            <button onClick={() =>
+    document
+      .getElementById("contact")
+      ?.scrollIntoView({ behavior: "smooth" })
+  } className="border border-[#95FF00] text-white px-8 py-4 rounded-full flex items-center gap-2 hover:bg-[#95FF00] hover:text-black transition duration-300">
               Contact Us
               <HiArrowRight />
             </button>

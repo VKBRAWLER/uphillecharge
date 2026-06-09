@@ -20,7 +20,7 @@ const navLinks = [
     href: "#partners",
   },
   {
-    name: "contact us",
+    name: "Contact Us",
     href: "#contact",
   },
 ];
