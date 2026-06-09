@@ -66,10 +66,31 @@ const Place = () => {
 
       {/* Details */}
       <div className="max-w-7xl mx-auto px-6 py-16">
+        {/* Map Section */}
+<div className="max-w-7xl mx-auto px-6 pt-10">
+  <h2 className="text-3xl font-bold mb-4">Location</h2>
 
-        <h2 className="text-4xl font-bold mb-4">
+  <div className="w-20 h-1 bg-[#95FF00] mb-6 rounded-full" />
+
+ {place.mapEmbed ? (
+  <iframe
+    src={place.mapEmbed}
+    className="w-full h-[400px] rounded-2xl border border-white/10"
+    loading="lazy"
+    allowFullScreen
+    referrerPolicy="no-referrer-when-downgrade"
+  />
+) : (
+  <div className="w-full h-[400px] flex items-center justify-center bg-[#0A0D26] rounded-2xl">
+    <p className="text-gray-400">Map not available</p>
+  </div>
+)}
+</div>
+
+        <h2 className="text-4xl mt-12 font-bold mb-4">
           Station Details
         </h2>
+        
         
         <div className="w-20 h-1 bg-[#95FF00] mb-8 rounded-full" />
 
@@ -80,11 +101,13 @@ const Place = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 
           <div className="bg-[#0A0D26] p-6 rounded-2xl border border-white/5 hover:border-[#95FF00]/30 transition-all duration-300 hover:scale-105">
-            <h3 className="text-[#95FF00] text-sm uppercase tracking-wide mb-2">Chargers</h3>
-            <p className="text-3xl font-bold">
-              {place.chargers}
-            </p>
-          </div>
+  <h3 className="text-[#95FF00] text-sm uppercase tracking-wide mb-2">
+    Charger Type
+  </h3>
+  <p className="text-xl font-bold">
+    {place.chargerType}
+  </p>
+</div>
 
           <div className="bg-[#0A0D26] p-6 rounded-2xl border border-white/5 hover:border-[#95FF00]/30 transition-all duration-300 hover:scale-105">
             <h3 className="text-[#95FF00] text-sm uppercase tracking-wide mb-2">Speed</h3>

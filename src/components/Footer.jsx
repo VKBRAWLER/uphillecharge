@@ -3,6 +3,7 @@ import {
   FaInstagram,
   FaLinkedinIn,
   FaWhatsapp,
+  
 } from "react-icons/fa";
 
 import {
@@ -50,28 +51,28 @@ const Footer = () => {
             <div className="flex gap-4">
 
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61590695810554"
                 className="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#95FF00] hover:text-black transition-all duration-300"
               >
                 <FaFacebookF />
               </a>
 
               <a
-                href="#"
+                href="https://www.instagram.com/uphillecharge/"
                 className="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#95FF00] hover:text-black transition-all duration-300"
               >
                 <FaInstagram />
               </a>
 
               <a
-                href="#"
+                href="https://www.linkedin.com/company/uphill-e-charge-private-limited/?viewAsMember=true"
                 className="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#95FF00] hover:text-black transition-all duration-300"
               >
                 <FaLinkedinIn />
               </a>
 
               <a
-                href="https://wa.me/919876543210"
+                href="https://wa.me/917302357399"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#95FF00] hover:text-black transition-all duration-300"
@@ -94,7 +95,7 @@ const Footer = () => {
               {/* Phone */}
 
               <a
-                href="tel:+919876543210"
+                href="tel:+917302357399"
                 className="flex items-start gap-3 group"
               >
                 <FiPhone
@@ -121,7 +122,21 @@ const Footer = () => {
                   admin@uphillecharge.com
                 </span>
               </a>
+               <a
+  href="https://wa.me/917302357399"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-start gap-3 group"
+>
+  <FaWhatsapp
+    size={20}
+    className="text-[#95FF00] mt-1 shrink-0"
+  />
 
+  <span className="text-white/60 group-hover:text-[#95FF00] transition">
+    Chat on WhatsApp
+  </span>
+</a>
 
               
 
@@ -134,29 +149,13 @@ const Footer = () => {
 
         <div className="border-t border-white/10 py-6">
 
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4">
 
             <p className="text-white/40 text-sm text-center md:text-left">
-              © 2026 Uphill Echarge. All Rights Reserved.
+              © 2025 Uphill E Charge Private Limited
             </p>
 
-            <div className="flex flex-wrap justify-center gap-6">
-
-              <a
-                href="#"
-                className="text-white/40 text-sm hover:text-[#95FF00] transition"
-              >
-                Privacy Policy
-              </a>
-
-              <a
-                href="#"
-                className="text-white/40 text-sm hover:text-[#95FF00] transition"
-              >
-                Terms & Conditions
-              </a>
-
-            </div>
+            
 
           </div>
 

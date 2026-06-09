@@ -16,7 +16,7 @@ const Partners = () => {
     {
       name: "PlugEasy",
       logo: "/plugeasy.png",
-      website: "#",
+      website: "https://plugeasy.in/",
     },
   ];
 
