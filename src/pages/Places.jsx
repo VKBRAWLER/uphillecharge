@@ -141,15 +141,13 @@ const Place = () => {
           <p className="text-gray-300">
             Phone: <span className="text-white">{place.contact}</span>
           </p>
-
-          <a
-            href={place.map}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-block mt-6 bg-[#95FF00] text-black px-6 py-3 rounded-full font-semibold hover:bg-[#7fd000] transition-colors duration-300"
-          >
-            View on Map →
-          </a>
+           <p className="text-gray-300">
+            Phone: <span className="text-white">admin@uphillecharge.com</span>
+          </p>
+          <p className="text-gray-300">
+            WhatsApp: <span className="text-white">{place.contact}</span>
+          </p>
+          
         </div>
 
       </div>
